@@ -13,8 +13,8 @@
         android:layout_width="38dp"
         android:layout_height="34dp"
         android:layout_marginTop="28dp"
-        android:scaleX="0.8"
-        android:scaleY="0.7"
+        android:scaleX="0.7"
+        android:scaleY="0.6"
         android:src="@drawable/icon_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.04"
@@ -29,7 +29,7 @@
         android:fontFamily="@font/nexon2_bold"
         android:text="회원가입"
         android:textColor="@color/instead"
-        android:textSize="41sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +60,6 @@
         android:fontFamily="@font/nexon2_light"
         android:hint="이메일을 입력하세요."
         android:inputType="textVisiblePassword"
-        android:maxEms="30"
         android:paddingLeft="34dp"
         android:paddingTop="2dp"
         android:paddingRight="34dp"
@@ -168,7 +167,7 @@
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.956" />
+        app:layout_constraintVertical_bias="0.92" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

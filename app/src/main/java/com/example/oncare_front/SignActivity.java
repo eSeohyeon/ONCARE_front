@@ -61,10 +61,10 @@ public class SignActivity extends AppCompatActivity {
                 .setBalloonAnimation(BalloonAnimation.FADE)
                 .build();
 
-        tooltip_warn.setOnClickListener(new View.OnClickListener() {
+        tooltip_warn.setOnClickListener(new View.OnClickListener() { // 느낌표 아이콘 클릭
             @Override
             public void onClick(View v) {
-                tooltip_pwd.showAlignTop(tooltip_warn, 71, -10);
+                tooltip_pwd.showAlignTop(tooltip_warn, 71, -10); // 툴팁 표시
             }
         });
 
@@ -83,6 +83,8 @@ public class SignActivity extends AppCompatActivity {
                 email_input= String.valueOf(edit_email.getText());
                 pwd_input= String.valueOf(edit_pwd.getText());
                 pwd_again_input= String.valueOf(edit_pwd_again.getText());
+                
+                // 미입력 영역 체크, 비밀번호/비밀번호 확인 일치 여부 체크
 
                 Intent next =  new Intent(getApplicationContext(), SignActivity2.class);
                 startActivity(next);
