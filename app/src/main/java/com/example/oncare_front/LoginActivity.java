@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                 pwd_input= String.valueOf(edit_pwd.getText());
 
                 // 로그인 성공
-                Intent home = new Intent(LoginActivity.this, HomeActivity.class);
+                Intent home = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(home);
             }
         });
@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
         btn_sign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // 회원가입 버튼 클릭
-                Intent to_sign = new Intent(LoginActivity.this, SignActivity.class);
+                Intent to_sign = new Intent(getApplicationContext(), SignActivity.class);
                 startActivity(to_sign);
             }
         });

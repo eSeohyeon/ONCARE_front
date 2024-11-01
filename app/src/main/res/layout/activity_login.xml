@@ -21,17 +21,19 @@
 
     <EditText
         android:id="@+id/edit_email"
-        android:layout_width="wrap_content"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:background="@drawable/editext_login"
         android:fontFamily="@font/nexon2_light"
-        android:inputType="text"
         android:hint="이메일"
         android:paddingLeft="38dp"
+        android:paddingRight="38dp"
         android:paddingTop="2dp"
         android:textColorHint="@color/hint"
         android:textSize="13sp"
+        android:singleLine="true"
+        android:inputType="textVisiblePassword"
         app:layout_constraintEnd_toEndOf="@+id/img_logo"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="@+id/img_logo"
@@ -39,7 +41,7 @@
 
     <EditText
         android:id="@+id/edit_pwd"
-        android:layout_width="wrap_content"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@drawable/editext_login"
@@ -47,6 +49,7 @@
         android:inputType="textPassword"
         android:hint="비밀번호"
         android:paddingLeft="38dp"
+        android:paddingRight="38dp"
         android:paddingTop="2dp"
         android:textColorHint="@color/hint"
         android:textSize="13sp"
