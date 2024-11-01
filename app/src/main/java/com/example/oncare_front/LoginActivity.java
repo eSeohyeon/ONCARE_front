@@ -1,5 +1,6 @@
 package com.example.oncare_front;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,13 +41,18 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) { // 로그인 버튼 클릭
                 email_input= String.valueOf(edit_email.getText());
                 pwd_input= String.valueOf(edit_pwd.getText());
+
+                // 로그인 성공
+                Intent home = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(home);
             }
         });
         
         btn_sign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // 회원가입 버튼 클릭
-                
+                Intent to_sign = new Intent(LoginActivity.this, SignActivity.class);
+                startActivity(to_sign);
             }
         });
 
