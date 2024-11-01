@@ -50,6 +50,7 @@ public class SignActivity2 extends AppCompatActivity {
         edit_emergency_call=findViewById(R.id.edit_emergency_call);
         radio_sex=findViewById(R.id.radio_sex);
 
+        // 툴팁 객체 생성
         tooltip_emergency_call = new Balloon.Builder(getApplicationContext())
                 .setArrowSize(10)
                 .setArrowOrientation(ArrowOrientation.TOP)
@@ -115,7 +116,7 @@ public class SignActivity2 extends AppCompatActivity {
                     toast_fail.dismissWithDelay(1300L);
                 }
                 else{
-                    Intent home = new Intent(getApplicationContext(), HomeActivity.class);
+                    Intent home = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(home);
                 }
 

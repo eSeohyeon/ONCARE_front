@@ -46,7 +46,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) { // 로그인 버튼 클릭
                 email_input= String.valueOf(edit_email.getText());
                 pwd_input= String.valueOf(edit_pwd.getText());
-
+                
+                // 툴팁 객체 생성
                 toast_fail = new Balloon.Builder(getApplicationContext())
                         .setWidthRatio(0.4f)
                         .setHeight(60)
@@ -67,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                     toast_fail.dismissWithDelay(1300L);
                 }else{
                     // 로그인 성공 시, 홈 화면으로 이동
-                    Intent home = new Intent(getApplicationContext(), HomeActivity.class);
+                    Intent home = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(home);
                 }
                 

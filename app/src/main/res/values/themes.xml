@@ -5,5 +5,10 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="Widget.BottomNavigationView"
+        parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/pretendard_variable</item>
+    </style>
+
     <style name="Theme.ONCARE_front" parent="Base.Theme.ONCARE_front" />
 </resources>
