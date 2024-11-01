@@ -27,7 +27,7 @@ public class SignActivity2 extends AppCompatActivity {
     EditText edit_name, edit_birthday, edit_phone, edit_emergency_call;
     RadioGroup radio_sex;
     String name_input, birthday_input, phone_input, emergency_call_input;
-    Balloon tooltip_emergency_call;
+    Balloon tooltip_emergency_call, toast_fail;
     char sex_input;
 
     @Override
@@ -68,6 +68,20 @@ public class SignActivity2 extends AppCompatActivity {
                 .setBalloonAnimation(BalloonAnimation.FADE)
                 .build();
 
+        toast_fail = new Balloon.Builder(getApplicationContext())
+                .setWidthRatio(0.4f)
+                .setHeight(60)
+                .setIsVisibleArrow(false)
+                .setPadding(5)
+                .setTextSize(10f)
+                .setCornerRadius(30f)
+                .setAlpha(0.8f)
+                .setText("빈 칸 없이 입력해주세요.")
+                .setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white))
+                .setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.theme_blue))
+                .setBalloonAnimation(BalloonAnimation.FADE)
+                .build();
+
         tooltip_questionmark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // 물음표 아이콘 클릭
@@ -96,7 +110,14 @@ public class SignActivity2 extends AppCompatActivity {
                 else sex_input='f';
 
                 // 미입력 영역 체크
-
+                if(name_input.isEmpty() || birthday_input.isEmpty() || phone_input.isEmpty() || emergency_call_input.isEmpty() || radio_sex.getCheckedRadioButtonId()==-1){
+                    toast_fail.showAlignTop(btn_start, 0, -50);
+                    toast_fail.dismissWithDelay(1300L);
+                }
+                else{
+                    Intent home = new Intent(getApplicationContext(), HomeActivity.class);
+                    startActivity(home);
+                }
 
             }
         });

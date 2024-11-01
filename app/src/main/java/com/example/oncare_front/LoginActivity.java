@@ -9,9 +9,13 @@ import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.skydoves.balloon.Balloon;
+import com.skydoves.balloon.BalloonAnimation;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -19,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     Button btn_login;
     ImageView btn_sign;
     String email_input, pwd_input; // 사용자가 입력한 이메일과 비밀번호를 받는 문자열
+    Balloon toast_fail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +47,30 @@ public class LoginActivity extends AppCompatActivity {
                 email_input= String.valueOf(edit_email.getText());
                 pwd_input= String.valueOf(edit_pwd.getText());
 
-                // 로그인 성공
-                Intent home = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(home);
+                toast_fail = new Balloon.Builder(getApplicationContext())
+                        .setWidthRatio(0.4f)
+                        .setHeight(60)
+                        .setIsVisibleArrow(false)
+                        .setPadding(5)
+                        .setTextSize(10f)
+                        .setCornerRadius(30f)
+                        .setAlpha(0.8f)
+                        .setText("빈 칸 없이 입력해주세요.")
+                        .setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white))
+                        .setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.theme_blue))
+                        .setBalloonAnimation(BalloonAnimation.FADE)
+                        .build();
+
+                // 빈 칸 체크
+                if(email_input.isEmpty() || pwd_input.isEmpty()){
+                    toast_fail.showAlignBottom(btn_login, 0, 250);
+                    toast_fail.dismissWithDelay(1300L);
+                }else{
+                    // 로그인 성공 시, 홈 화면으로 이동
+                    Intent home = new Intent(getApplicationContext(), HomeActivity.class);
+                    startActivity(home);
+                }
+                
             }
         });
         
