@@ -17,25 +17,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.299" />
+        app:layout_constraintVertical_bias="0.26" />
 
     <EditText
         android:id="@+id/edit_email"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/editext_login"
         android:fontFamily="@font/nexon2_light"
         android:hint="이메일"
+        android:inputType="textVisiblePassword"
         android:paddingLeft="38dp"
-        android:paddingRight="38dp"
         android:paddingTop="2dp"
+        android:paddingRight="38dp"
+        android:singleLine="true"
         android:textColorHint="@color/hint"
         android:textSize="13sp"
-        android:singleLine="true"
-        android:inputType="textVisiblePassword"
         app:layout_constraintEnd_toEndOf="@+id/img_logo"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="@+id/img_logo"
         app:layout_constraintTop_toBottomOf="@+id/img_logo" />
 

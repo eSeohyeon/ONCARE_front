@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
@@ -41,11 +42,13 @@ public class LoginActivity extends AppCompatActivity {
         btn_login=findViewById(R.id.btn_login);
         btn_sign=findViewById(R.id.btn_sign);
 
+
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // 로그인 버튼 클릭
                 email_input= String.valueOf(edit_email.getText());
                 pwd_input= String.valueOf(edit_pwd.getText());
+
                 
                 // 툴팁 객체 생성
                 toast_fail = new Balloon.Builder(getApplicationContext())
@@ -74,10 +77,12 @@ public class LoginActivity extends AppCompatActivity {
                 
             }
         });
+
         
         btn_sign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // 회원가입 버튼 클릭
+
                 Intent to_sign = new Intent(getApplicationContext(), SignActivity.class);
                 startActivity(to_sign);
             }

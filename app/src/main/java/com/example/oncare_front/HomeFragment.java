@@ -37,7 +37,7 @@ public class HomeFragment extends Fragment {
         heartrate=120;
         step=7878;
         ecg="부정맥";
-        user_name="abcdefghijklmnop";  // 테스트용
+        user_name="김김김김";  // 테스트용
 
         txt_name.setText(user_name);
         data_heartrate.setText(Integer.toString(heartrate));
