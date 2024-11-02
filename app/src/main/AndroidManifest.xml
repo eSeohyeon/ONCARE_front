@@ -14,12 +14,12 @@
         android:theme="@style/Theme.ONCARE_front"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".BaseActivity"
             android:exported="false"
             android:label="@string/title_activity_base" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
         <activity
             android:name=".SignActivity2"
             android:exported="false" />

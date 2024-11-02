@@ -7,6 +7,8 @@
     <color name="theme_blue">#408AE9</color>
     <color name="red">#E54343</color>
     <color name="menu_false">#A8A8A8</color>
-    <color name="menu_ripple">#42E2E2E2</color>
-    <color name="transparent">#42E2E2E2</color>
+    <color name="menu_ripple">#89E2E2E2</color>
+    <color name="transparent">#42E93737</color>
+    <color name="dark_blue">#3A5167</color>
+    <color name="unit">#929292</color>
 </resources>

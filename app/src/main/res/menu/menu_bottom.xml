@@ -3,13 +3,13 @@
     <item
         android:id="@+id/tab_user"
         android:title="내 정보"
-        android:icon="@drawable/icon_user"/>
+        android:icon="@drawable/person_24"/>
     <item
         android:id="@+id/tab_home"
         android:title="홈"
-        android:icon="@drawable/icon_home"/>
+        android:icon="@drawable/home_24"/>
     <item
         android:id="@+id/tab_map"
         android:title="복지 시설 찾기"
-        android:icon="@drawable/icon_map"/>
+        android:icon="@drawable/map_24"/>
 </menu>
