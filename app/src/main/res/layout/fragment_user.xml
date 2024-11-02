@@ -14,7 +14,7 @@
         <LinearLayout
             android:id="@+id/user_tab_info"
             android:layout_width="365dp"
-            android:layout_height="130dp"
+            android:layout_height="120dp"
             android:layout_marginBottom="28dp"
             android:background="@drawable/user_info"
             android:orientation="vertical"
@@ -30,7 +30,6 @@
                 android:fontFamily="@font/nexon2_medium"
                 android:gravity="start"
                 android:paddingTop="38dp"
-                android:text="이이이"
                 android:textColor="@color/instead"
                 android:textSize="29sp" />
 
@@ -42,7 +41,6 @@
                 android:fontFamily="@font/nexon2_light"
                 android:gravity="start"
                 android:paddingTop="4dp"
-                android:text="abcdfefefefefefef@email.com"
                 android:textColor="@color/instead"
                 android:textSize="12sp" />
 
@@ -52,7 +50,7 @@
         <LinearLayout
             android:id="@+id/user_tab_modi"
             android:layout_width="365dp"
-            android:layout_height="59dp"
+            android:layout_height="65dp"
             android:layout_marginBottom="12dp"
             android:background="@drawable/user_tab"
             app:layout_constraintBottom_toTopOf="@+id/user_tab_noti"
@@ -76,14 +74,14 @@
                 android:fontFamily="@font/nexon2"
                 android:text="개인정보 수정"
                 android:textColor="@color/instead"
-                android:textSize="13sp" />
+                android:textSize="14sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/user_tab_dev"
             android:layout_width="365dp"
-            android:layout_height="59dp"
+            android:layout_height="65dp"
             android:layout_marginBottom="12dp"
             android:background="@drawable/user_tab"
             app:layout_constraintBottom_toTopOf="@+id/user_tab_del"
@@ -107,14 +105,14 @@
                 android:fontFamily="@font/nexon2"
                 android:text="장치 설정"
                 android:textColor="@color/instead"
-                android:textSize="13sp" />
+                android:textSize="14sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/user_tab_noti"
             android:layout_width="365dp"
-            android:layout_height="59dp"
+            android:layout_height="65dp"
             android:layout_marginBottom="12dp"
             android:background="@drawable/user_tab"
             app:layout_constraintBottom_toTopOf="@+id/user_tab_dev"
@@ -138,15 +136,15 @@
                 android:fontFamily="@font/nexon2"
                 android:text="알림 설정"
                 android:textColor="@color/instead"
-                android:textSize="13sp" />
+                android:textSize="14sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/user_tab_del"
             android:layout_width="365dp"
-            android:layout_height="59dp"
-            android:layout_marginBottom="268dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="260dp"
             android:background="@drawable/user_tab"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/user_tab_dev"
@@ -169,7 +167,7 @@
                 android:fontFamily="@font/nexon2"
                 android:text="회원 탈퇴"
                 android:textColor="#E54343"
-                android:textSize="13sp" />
+                android:textSize="14sp" />
 
         </LinearLayout>
 

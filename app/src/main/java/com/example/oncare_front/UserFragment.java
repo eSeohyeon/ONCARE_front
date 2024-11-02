@@ -9,11 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 public class UserFragment extends Fragment {
 
-    LinearLayout tab_info, tab_noti, tab_dev, tab_del;
+    LinearLayout tab_modi, tab_noti, tab_dev, tab_del;
+    TextView txt_name, txt_email;
+    String user_name, user_email; // 사용자 정보 저장
 
 
     @Override
@@ -27,12 +30,18 @@ public class UserFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_user, container, false);
 
-        tab_info=v.findViewById(R.id.user_tab_info);
+        tab_modi=v.findViewById(R.id.user_tab_modi);
         tab_noti=v.findViewById(R.id.user_tab_noti);
         tab_dev=v.findViewById(R.id.user_tab_dev);
         tab_del=v.findViewById(R.id.user_tab_del);
+        txt_name=v.findViewById(R.id.user_name);
+        txt_email=v.findViewById(R.id.user_email);
 
-        tab_info.setOnClickListener(new View.OnClickListener() {
+        // user_name, user_email 에 사용자 이름과 이메일을 불러와서 저장
+        // txt_name.setText(user_name);
+        // txt_email.setText(user_email);
+
+        tab_modi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent to_modify = new Intent(getActivity(), ModifyActivity.class);

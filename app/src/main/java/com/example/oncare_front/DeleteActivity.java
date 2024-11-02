@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class DeleteActivity extends AppCompatActivity {
     ImageView btn_back;
     Button btn_delete;
     ConfirmDialog confirmDialog;
+    String test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class DeleteActivity extends AppCompatActivity {
 
         confirmDialog = new ConfirmDialog(this, R.string.delete_dialog_title, R.string.delete_dialog_msg);
 
+
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // 뒤로가기 버튼 클릭
@@ -45,11 +48,12 @@ public class DeleteActivity extends AppCompatActivity {
             }
         });
 
+
         btn_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 로딩 애니메이션, 탈퇴가 완료되었습니다 팝업창
-                confirmDialog.show();
+                // 로딩 애니메이션 추가 예정
+                confirmDialog.show(); // 탈퇴 완료 팝업
 
                 confirmDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
                     @Override

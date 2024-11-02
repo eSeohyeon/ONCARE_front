@@ -11,8 +11,8 @@ import android.widget.TextView;
 public class HomeFragment extends Fragment {
 
     TextView txt_name, data_heartrate, data_step, data_ecg, nim;
-    int heartrate, step;
-    String ecg, user_name;// 가져온 생체 데이터 저장
+    int heartrate, step; // 심박수, 걸음수 저장
+    String ecg, user_name;// 심전도 데이터, 사용자 이름 데이터 저장
 
 
     @Override
@@ -33,6 +33,7 @@ public class HomeFragment extends Fragment {
         data_ecg=v.findViewById(R.id.data_ecg);
         txt_name.bringToFront();
         nim.bringToFront();
+
 
         heartrate=120;
         step=7878;
