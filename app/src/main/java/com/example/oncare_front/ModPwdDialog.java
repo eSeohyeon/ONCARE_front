@@ -44,6 +44,7 @@ public class ModPwdDialog extends Dialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Objects.requireNonNull(getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        setCancelable(false);
 
         btn_cancle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,14 +52,6 @@ public class ModPwdDialog extends Dialog {
                 dismiss();
             }
         });
-
-        btn_submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dismiss();
-            }
-        });
-
 
     }
 }

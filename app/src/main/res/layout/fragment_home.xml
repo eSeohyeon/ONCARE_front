@@ -25,6 +25,17 @@
             app:layout_constraintHorizontal_bias="0.096"
             app:layout_constraintStart_toStartOf="@+id/imageView" />
 
+        <Button
+            android:id="@+id/btn_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:text="For Test"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.819"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/user_name"
             android:layout_width="130dp"

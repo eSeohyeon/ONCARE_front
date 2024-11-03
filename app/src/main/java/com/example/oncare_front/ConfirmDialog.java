@@ -20,7 +20,6 @@ public class ConfirmDialog extends Dialog {
 
     TextView txt_title, txt_msg;
     Button btn_close;
-    String flag="nothing";
 
     public ConfirmDialog(@NonNull Context context, int contents_title, int contents_msg) {
         super(context);
@@ -34,16 +33,12 @@ public class ConfirmDialog extends Dialog {
         txt_msg.setText(contents_msg);
     }
 
-    public String getFlag(){
-        return flag;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Objects.requireNonNull(getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
-        flag="something";
+        setCancelable(false);
 
         btn_close.setOnClickListener(new View.OnClickListener() {
             @Override
